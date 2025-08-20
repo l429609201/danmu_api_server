@@ -15,7 +15,7 @@ class Anime(Base):
     __tablename__ = "anime"
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     title: Mapped[str] = mapped_column(String(255), index=True)
-    type: Mapped[str] = mapped_column(Enum('tv_series', 'movie', 'ova', 'other'), default='tv_series')
+    type: Mapped[str] = mapped_column(Enum('tv_series', 'movie', 'ova', 'other', name="anime_type"), default='tv_series')
     image_url: Mapped[Optional[str]] = mapped_column(String(512))
     local_image_path: Mapped[Optional[str]] = mapped_column(String(512))
     season: Mapped[int] = mapped_column(Integer, default=1)

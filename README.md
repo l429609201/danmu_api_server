@@ -120,7 +120,7 @@
     ```yaml
     services:
       postgres:
-        image: postgres:15-alpine
+        image: postgres:16
         container_name: danmu-postgres
         restart: unless-stopped
         environment:
